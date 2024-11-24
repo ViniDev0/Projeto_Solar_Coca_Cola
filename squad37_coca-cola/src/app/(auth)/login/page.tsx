@@ -2,7 +2,6 @@ export const metadata = {
   title: "Login Solar CocaCola",
 }
 
-
 export default function Login() {
   return (
     <>
