@@ -1,0 +1,89 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+#backgroundBody {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  background: url(/images/backgrounds/backgroundLogin.png);
+  background-repeat: no-repeat;
+
+  background-size: auto;
+  position: relative;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-column: 3;
+  background: white;
+  height: 100vh;
+  position: relative;
+}
+.logoDisplayer {
+  position: absolute;
+  top: 14vh;
+}
+#sloganPrincipal {
+  font-size: 5rem;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  bottom: 1vw;
+  left: 5vh;
+}
+.detalhesSlogan {
+  color: #FFB803;
+  font-weight: bolder;
+  font-size: 6rem;
+}
+#detalhamentoHash {
+  font-size: 9rem;
+}
+.formsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+  padding: 15vh 5vw;
+  margin: 11vw 4vw 4vw 4vw;
+  border-radius: 25px;
+  align-items: center;
+}
+
+.formsBlock .inputers {
+  width: 22vw;
+  height: 4vh;
+  border: 0.5px solid black;
+  border-radius: 17px;
+  padding: 10px;
+}
+
+.formsBlock .inputers::placeholder {
+  color: #837F7F;
+  line-height: 1.5;
+  font-size: 1rem;
+  
+}
+
+.formsBlock .inputers:focus {
+  border-color: white;
+  outline: none;
+  box-shadow: 0 0 5px black;
+}
+
+#postInput {
+  padding: 2vh 9vh;
+  border: none;
+  border-radius: 30px;
+  background: #FFB803;
+  font-size: 1.75rem;
+  color: white;
+  font-weight: bolder;
+}
+#postInput:hover {
+  transition: ease-in-out 200ms;
+  background: #ecaa02;
+}
