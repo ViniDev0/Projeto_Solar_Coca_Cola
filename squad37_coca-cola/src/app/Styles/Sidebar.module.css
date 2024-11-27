@@ -1,11 +1,5 @@
-.bodySets  {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.container{
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-}
+
+
 .sidebar{
   top: 0;
   display: flex;
@@ -42,15 +36,18 @@
   background: transparent;
   cursor: pointer;
   color: #ffffff;
-
 }
 
-.sidebar button:hover{
+.linki {
+  text-decoration: none;
+}
+
+.sidebar .naviCima:hover{
   border-radius: 50px;
   background: #690101;
   color: #ffffff;
 }
-.sidebar .botao-fundo button:hover{
+.botao-fundo, .botaoBaixo:hover{
   border-radius: 50px;
   background: #ff0000;
   color: #ffffff;
@@ -66,7 +63,6 @@
 }
 .line{
   width: 170px;
-
 }
 .logo-solar{
   width: 150px;
@@ -103,8 +99,9 @@
   margin-top: 10px;
   /* border: 1px solid black; */
 }
-#cor{
+.cor{
   background: #690101;
   width: 17vw;
   height: 200px;
 }
+

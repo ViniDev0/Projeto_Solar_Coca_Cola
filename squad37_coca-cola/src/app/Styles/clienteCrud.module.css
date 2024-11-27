@@ -1,0 +1,40 @@
+
+/* modal  */
+.bodyPadrao {
+  position: fixed;
+}
+.modal-footer-cliente {
+  display: flex;
+  justify-content: flex-end ; /* Alinha o botão à direita */
+  align-items: end;
+  padding: 15px;
+  max-height: 100%;
+  margin-top: 100px;
+  
+}
+
+.modal-form-cliente  {
+  display: grid ;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px; 
+  padding: 10px;
+}
+.modal-form-cliente  input {
+  height: 30px;
+}
+.modal-body-client form input {
+  display: flex;
+  padding: 15px;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+#modal.hide, #fade.hide{
+  opacity: 0;
+  pointer-events: none;
+}
+#modal-hide{
+  top: 0;
+}
+#logo-cliente{
+  width: 200px;
+}

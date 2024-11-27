@@ -2,17 +2,18 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Styles from '@/app/Styles/Sidebar.module.css';
-import { useState } from 'react';
+import Styles from "@/app/Styles/Sidebar.module.css";
+
+
 const Sidebar: React.FC = () => {
+
    const handleLogout = () => {
-    useState();
+    window.location.href = '';
     // Implementar logout aqui
   };
 
   return (
-    <body className={Styles.bodySets}>
-      
+    <>
     <aside className={Styles.sidebar}>
       <div className={Styles.elementosCima}>
         <header className={Styles.sidebarHeader}>
@@ -21,52 +22,53 @@ const Sidebar: React.FC = () => {
               <Image src="/images/icons/SOLAR-LOGO.png" alt="Logo Solar" width={150} height={50} />
             </div>
             <div className={Styles.line}>
-              <Image src="/images/icons/Line 7.png" alt="Line" width={200} height={10} />
+              <Image src="/images/icons/Line 7.png" alt="Line" width={200} height={2} />
             </div>
           </div>
         </header>
         <nav className={Styles.botaoCima}>
-          <Link href="/">
-            <button>
+          <Link href="/" className={Styles.linki}>
+            <button className={Styles.naviCima}>
               <span>DASHBOARD</span>
             </button>
           </Link>
-          <Link href="/CRUDClientes">
-            <button>
+          <Link href="/CRUDClientes" className={Styles.linki}>
+            <button className={Styles.naviCima}>
               <span>CLIENTES</span>
             </button>
           </Link>
-          <Link href="/CRUDProduto">
-            <button>
+          <Link href="/CRUDProduto" className={Styles.linki}>
+            <button className={Styles.naviCima}>
               <span>PRODUTOS</span>
             </button>
           </Link>
-          <Link href="/CRUDPromocoes">
-            <button>
+          <Link href="/CRUDPromocoes" className={Styles.linki}>
+            <button className={Styles.naviCima}>
               <span>PROMOÇÕES</span>
             </button>
           </Link>
-          <Link href="/CRUDPrecos">
-            <button>
+          <Link href="/CRUDPrecos" className={Styles.linki}>
+            <button className={Styles.naviCima}>
               <span>PREÇOS</span>
             </button>
           </Link>
         </nav>
       </div>
-      <div id="cor">
+      <div className={Styles.cor}>
         <div className={Styles.navBaixa}>
           <nav className={Styles.botaoFundo}>
-            <button>
+            <button className={Styles.botaoBaixo}>
               <span>MEU PERFIL</span>
             </button>
-            <button id="logoutButton" onClick={handleLogout}>
+            <button className={Styles.botaoBaixo}>
               SAIR
             </button>
           </nav>
         </div>
       </div>
     </aside>
-    </body>
+    </>
+      
   );
 };
 

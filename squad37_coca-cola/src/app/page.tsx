@@ -21,7 +21,7 @@ export default function Login() {
       <div className="logoDisplayer">
         <Image src="/images/icons/LogoCoca.jpg" width={300} height={225} alt="logococa.jpg"/>
       </div>
-        <form action="/pages/Clientes" method="post" className="formsBlock" id="loginForm" name="validationForms" >
+        <form action="/pages/clientesCRUD" method="post" className="formsBlock" id="loginForm" name="validationForms" >
 
           <input type="email" id="emailField" className="inputers" placeholder="Digite Seu Email" />
 
