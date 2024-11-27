@@ -1,28 +1,31 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from './Sidebar.module.css'
-
+import Styles from '@/app/Styles/Sidebar.module.css';
+import { useState } from 'react';
 const Sidebar: React.FC = () => {
-  const handleLogout = () => {
-    console.log('Logout');
+   const handleLogout = () => {
+    useState();
     // Implementar logout aqui
   };
 
   return (
-    <aside className={styles.sidebar}>
-      <div className={styles.elementosCima}>
-        <header className={styles.sidebarHeader}>
-          <div className={styles.logoElemento}>
-            <div className={styles.logoSolar}>
-              <Image src="/imgs/SOLAR-LOGO.png" alt="Logo Solar" width={150} height={50} />
+    <body className={Styles.bodySets}>
+      
+    <aside className={Styles.sidebar}>
+      <div className={Styles.elementosCima}>
+        <header className={Styles.sidebarHeader}>
+          <div className={Styles.logoElemento}>
+            <div className={Styles.logoSolar}>
+              <Image src="/images/icons/SOLAR-LOGO.png" alt="Logo Solar" width={150} height={50} />
             </div>
-            <div className={styles.line}>
-              <Image src="/imgs/Line 7.png" alt="Line" width={200} height={10} />
+            <div className={Styles.line}>
+              <Image src="/images/icons/Line 7.png" alt="Line" width={200} height={10} />
             </div>
           </div>
         </header>
-        <nav className={styles.botaoCima}>
+        <nav className={Styles.botaoCima}>
           <Link href="/">
             <button>
               <span>DASHBOARD</span>
@@ -51,8 +54,8 @@ const Sidebar: React.FC = () => {
         </nav>
       </div>
       <div id="cor">
-        <div className={styles.navBaixa}>
-          <nav className={styles.botaoFundo}>
+        <div className={Styles.navBaixa}>
+          <nav className={Styles.botaoFundo}>
             <button>
               <span>MEU PERFIL</span>
             </button>
@@ -63,6 +66,7 @@ const Sidebar: React.FC = () => {
         </div>
       </div>
     </aside>
+    </body>
   );
 };
 

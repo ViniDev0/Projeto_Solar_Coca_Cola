@@ -1,7 +1,9 @@
+import Sidebar from "@/app/components/aside";
+
 export default function dashboard () {
   return (
     <div>
-      <h1>Dashboard</h1>
+      <Sidebar />
     </div>
   );
 }
