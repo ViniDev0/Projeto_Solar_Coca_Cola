@@ -1,0 +1,120 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+
+#main-login{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../imgs/foto\ de\ fundo.png);
+    align-content: center;
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: right center;; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-attachment: fixed; /* A imagem permanece fixa ao rolar a página */
+
+  }
+
+ #areaLogin{
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    justify-self: center;
+    border-radius: 20px;
+    justify-items: center;
+    margin-left: 600px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+} 
+
+#areaLogin img{
+    margin-top: 41px;
+    max-width: 100%;
+    height: 80px;
+    
+}
+
+/* #loginForm {
+    border: 1px solid rgb(5, 247, 255);
+    
+} */
+
+#inputs{
+    display: grid;
+    gap: 25px;
+    margin-top: 25px;
+} 
+
+.inputers{
+    height: 12px;
+    width: 300px;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.377);
+} 
+ 
+#postInput{
+    height: 30px;
+    width: 160px;
+    justify-self: center;
+    background-color: #FFB803;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+   font-weight: bold;
+} 
+
+/* #decoracao{
+    position: absolute;
+    top: 84.8vh;
+    left: 37vw;
+    bottom: 0vh;
+    max-height: 26vh;
+} */
+
+/* #decoracao-2{
+    position: absolute;
+    top: 0vh;
+    left: 88.1vw;
+    max-height: 26vh;
+} */
+
+ /* img{
+    max-width: 100%;
+    display: block;
+    grid-column: 1;
+    
+} */
+
+/* .logo-login{
+    max-width: 200px;
+    display: block;
+    margin-bottom: 40px;
+   
+} */
+
+/* .login-conteiner{
+    display: grid;
+    border: 1px solid rgb(189, 155, 17);
+    justify-items: center;
+} */
+
+@media (max-width: 1101px) {
+    
+
+    
+     #areaLogin{
+        background-color: rgb(255, 255, 255);
+        width: 400px;
+        height: 400px;
+        justify-self: center;
+        border-radius: 20px;
+        justify-items: center;
+        margin-left: 600px;
+        margin-right: 80px;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    }  
+      
+}
