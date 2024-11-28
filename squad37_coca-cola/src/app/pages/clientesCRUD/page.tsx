@@ -11,7 +11,7 @@ export default function clientes() {
       <div className={tabelas.conteinerTabela}>
            
            <div className={tabelas.conteinerBuscarClinte}>
-               <h2>Buscar Cliente</h2>
+               <h2>Buscar Clientes</h2>
                 <div className={tabelas.pesquisa}>
                    <input type="text" className={tabelas.pesquisar} placeholder="Pesquisar..."/>
                </div>
