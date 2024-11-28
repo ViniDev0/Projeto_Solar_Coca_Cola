@@ -1,0 +1,32 @@
+
+/* modal  */
+
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão à direita */
+    padding: 15px;
+}
+.modal-form-promocoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px; 
+    padding: 10px;
+}
+
+.modal-body form input {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+#modal.hide, #fade.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+#modal-hide{
+    top: 0;
+}
+#logo-cliente{
+    width: 200px;
+}

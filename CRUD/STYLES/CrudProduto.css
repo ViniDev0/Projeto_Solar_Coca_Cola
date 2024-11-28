@@ -1,0 +1,65 @@
+
+
+/* modal */
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end; 
+    padding: 15px;
+    margin-top: 30px;
+}
+.modal-form-produto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    padding: 10px;
+}
+.modal-body{
+    display: flex;
+    align-items: flex-start; 
+    justify-content: space-between;
+    gap: 10px;
+}
+.info-crud{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.modal-body form input {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+#modal.hide, #fade.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+#modal-hide{
+    top: 0;
+}
+#logo-cliente{
+    width: 200px;
+}
+#BOTAO-IMG {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 50px ;
+    border: 0px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#BOTAO-IMG button {
+    background-image: none; 
+    border: 0px;
+}
+#BOTAO-IMG button:hover{
+    background-color: #dddada;
+    cursor: pointer;
+    border-radius: 50px;
+    border: 0px;
+}

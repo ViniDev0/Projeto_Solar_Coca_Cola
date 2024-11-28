@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meat name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../STYLES/style.css">
+    <title>Aside Solar</title>
+</head>
+<body>
+    <div class="container">
+      <aside class="sidebar">
+         <div class="elementos-cima">
+            <header class="sidebar-header">
+                <div class="logo-elemento">
+                    <img class="logo-solar" src="../imgs/SOLAR-LOGO.png" alt="">
+                    <img class="line"  src="../imgs/Line 7.png" alt="">
+                </div>
+            </header>
+            <nav class="botao-cima">
+                <button onclick="window.location.href='./'">
+                    <span>DASHBOARD</span>
+                </button>
+                <button onclick="window.location.href='./CRUDClientes.html'">
+                    <span>CLIENTES</span> 
+                </button>
+                <button onclick="window.location.href='./CRUDProduto.html'">
+                    <span>PRODUTOS</span>
+                </button>
+                <button onclick="window.location.href='./CRUDPromocoes.html'">
+                    <span>PROMOÇÕES</span>
+                </button>
+                <button onclick="window.location.href='./CRUDPrecos.html'">
+                    <span>PREÇOS</span>
+                </button>
+            </nav>
+
+    </div>
+    <div id="cor">
+        <div class="nav-baixa">
+            <nav class="botao-fundo">
+                <button>
+                        <span>MEU PERFIL</span>
+                </button>
+                <button id="logoutButton" onclick="logout()">SAIR</button>
+            </nav>
+        </div>
+    </div>
+    </aside>
+    <main>
+
+        <div class="conteiner-tabela">
+           
+            <div class="conteinerBuscarClinte">
+                <h2>Buscar Cliente</h2>
+                 <div class="pesquisa">
+                    <input type="text" id="pesquisa" placeholder="Pesquisar...">
+                </div>
+            </div>
+            
+        <div class="tabela-conteiner">
+            <h2 id="h2-impressao">Relação de Clientes</h2>
+
+            <table id="tableClient">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Contato</th>
+                        <th>Endereço</th>
+                        <th>Nível</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    </tr>
+
+                </tbody>
+            </table>        
+        </div>
+        </div>
+    <div class="botao-cabecalho">     
+        <button class="open-modal"> <img src="../imgs/adicionar.png" alt=""><span> Adicionar Cliente</span></button> 
+        
+
+    </div>
+
+        <button id="button-imprimir">imprimir</button>
+
+        <!-- Modal -->
+        <div id="fade" class="hide"></div>
+        <div id="modal" class="hide">
+            <div class="modal-header">
+                <img  id="logo-cliente" src="../imgs/Cliente Solar (1).png" alt="">
+                <button id="close-modal"> <img src="../imgs/excluir.png" alt=""></button>
+            </div>
+            <div class="modal-body-cliente">
+                <form id="form" class="modal-form-cliente">
+                    <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Cliente"required>
+                    <input type="text" id="contato" class="modal-field" placeholder="(XX) XXXXX-XXXX" required>
+                    <input type="text" id="endereco" class="modal-field" placeholder="Endereço do Cliente" required>
+                    <select id="nivel" class="modal-field" required>
+                        <option value="" disabled selected>Nível do cliente</option>
+                        <option value="ouro">Ouro</option>
+                        <option value="prata">Prata</option>
+                        <option value="bronze">Bronze</option>
+                    </select>
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button-green">Salvar</button>
+                    <button id="cancelar" class="button-red">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+</div>
+<script src="../SCRIPTS/scriptCliente.js"></script>
+</body>
+</html>
