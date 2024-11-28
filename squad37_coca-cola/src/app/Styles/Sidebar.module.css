@@ -15,7 +15,7 @@
   /* border: 1px solid black; */
 }
 
-.sidebar-header{
+.sidebarHeader{
   width: 100%;
 }
 
@@ -47,12 +47,12 @@
   background: #690101;
   color: #ffffff;
 }
-.botao-fundo, .botaoBaixo:hover{
+.botao-Fundo, .botaoBaixo:hover{
   border-radius: 50px;
   background: #ff0000;
   color: #ffffff;
 }
-.logo-elemento{
+.logoElemento{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,13 +63,15 @@
 }
 .line{
   width: 170px;
+  margin-right: 40px;
 }
-.logo-solar{
+.logoSolar{
   width: 150px;
-  padding-left: 13px;
+  /* padding-left: 1px; */
+  margin-right: 13px;
 }
 
-.elementos-cima{
+.elementosCima{
   display: grid;
   justify-items: center;
   margin-top: 30px;
@@ -77,7 +79,7 @@
   /* border: 1px solid black; */
 }
 
-.botao-cima{
+.botaoCima{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,7 +89,7 @@
   padding-top: 20px;
   padding-left: 10px;
 }
-.botao-fundo{
+.botaoFundo{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,7 +97,7 @@
   margin-right: 25px;
   /* border: 1px solid black; */
 } 
-.botao-fundo button{
+.botaoFundo button{
   margin-top: 10px;
   /* border: 1px solid black; */
 }

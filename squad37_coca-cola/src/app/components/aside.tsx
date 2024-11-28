@@ -19,7 +19,7 @@ const Sidebar: React.FC = () => {
         <header className={Styles.sidebarHeader}>
           <div className={Styles.logoElemento}>
             <div className={Styles.logoSolar}>
-              <Image src="/images/icons/SOLAR-LOGO.png" alt="Logo Solar" width={150} height={50} />
+              <Image src="/images/icons/SOLAR-LOGO.png" alt="Logo Solar" width={175} height={70} />
             </div>
             <div className={Styles.line}>
               <Image src="/images/icons/Line 7.png" alt="Line" width={200} height={2} />

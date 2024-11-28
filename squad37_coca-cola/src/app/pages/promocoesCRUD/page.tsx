@@ -2,7 +2,7 @@ import Sidebar from "@/app/components/aside";
 import cliente from "@/app/Styles/clienteCrud.module.css";
 import geral from "@/app/Styles/general.module.css";
 import tabelas from "@/app/Styles/tabelas.module.css";
-export default function clientes() {
+export default function promocoes() {
   return (
     <>
     <body className={geral.container}>
@@ -23,10 +23,10 @@ export default function clientes() {
            <table className={tabelas.tableClient}>
                <thead className={tabelas.topoTabela}>
                    <tr className={tabelas.rowTabela}>
-                   <th>Nome Cliente</th>
-                     <th>Região</th>
-                     <th>Nível</th>
-                     <th>Ações</th>
+                   <th className={tabelas.cabecaTabela}>Nome Cliente</th>
+                     <th className={tabelas.cabecaTabela}>Região</th>
+                     <th className={tabelas.cabecaTabela}>Nível</th>
+                     <th className={tabelas.cabecaTabela}>Ações</th>
                    </tr>
                </thead>
                <tbody>
@@ -52,9 +52,10 @@ export default function clientes() {
                <button className={tabelas.closeModal}> <img src="/images/icons/excluir.png" alt=""/></button>
            </div>
               <div className={tabelas.modalBodyCliente}>
-              <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Cliente"required>
-                    <!-- <input type="text" id="regiao" class="modal-field" placeholder="Região" required> -->
-                    <select id="regiao" class="modal-field" required>
+                <form action="/" className="">
+              <input type="text" id="nome" data-index="new" className="modal-field" placeholder="Nome do Cliente"required/>
+                    <input type="text" id="regiao" className="modal-field" placeholder="Região" required/>
+                    <select id="regiao" className="modal-field" required>
                         <option value="" disabled selected>Selecione a Região</option>
                         <option value="AC">AC</option>
                         <option value="AL">AL</option>
@@ -75,7 +76,7 @@ export default function clientes() {
                         <option value="TO">TO</option>
 
                     </select>
-                    <select id="nivel" class="modal-field" required>
+                    <select id="nivel" className="modal-field" required>
                         <option value="" disabled selected>Nível do cliente</option>
                         <option value="ouro">Ouro</option>
                         <option value="prata">Prata</option>

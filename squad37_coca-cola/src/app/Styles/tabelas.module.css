@@ -27,15 +27,15 @@
 /* estilos tabela  */
 
 /* Posicionamento tabela*/
-.conteiner-tabela{
+.containerTabela{
   display: grid;
   position: fixed;
   margin-left: 150px ;
-  top: 70px;
+  top: 50px;
 }
 
 /* Container da tabela com altura e rolagem */
-.tabela-conteiner {
+.tabelaConteiner {
   max-height: 300px; 
   overflow-y: auto; /* Adiciona barra de rolagem vertical quando necessário */
   margin-top: 20px;  
@@ -54,21 +54,19 @@
 .tabela-conteiner::-webkit-scrollbar-thumb:hover {
   background-color: #7e0404;
 }
-.tableClient table {
+.tableClient  {
   margin-left: 20px;
   width: 60vw;
   border-collapse: collapse;
   border-radius: 5px;
   margin-top: 5px;
 }
-.topoTabela thead{
+.topoTabela {
   border: 1px solid #e6e5e5; 
   border-radius: 5px 5px 0 0; 
   overflow: hidden;
-
-
 }
-.cabecaTabela th {
+.topoTabela .cabecaTabela {
   border: 1px solid #e6e5e5;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -77,18 +75,18 @@
   padding: 10px;
 }
 
-.topoTabela .cabecaTabela th {
+.topoTabela {
   border: none; 
   padding: 5px;
   background-color: #ffffff;
 }
-.corpoTabela tbody{
+.corpoTabela {
   border: 1px solid #e6e5e5;  
   border-top: none; 
   scroll-behavior: auto;
 
 }
-.topoTabela .cabecaTabela, .corpoTabela {
+.topoTabela, .corpoTabela {
   border: none; 
   padding: 5px;
   background-color: #ffffff;
@@ -138,6 +136,8 @@
   background: rgb(231, 43, 43);
 }
 
+
+
 .h2Impressao{
   display: none;
 }
@@ -185,7 +185,7 @@
   background: rgb(236, 19, 19);
 }
 
-.open-modal {
+.openModal {
   height: 40px;
   width: 160px;
   text-align: center;
@@ -200,21 +200,21 @@
   position: relative;
   top: 200px;
 }
-.open-modal:hover{
+.openModal:hover{
   opacity: 1;
 }
-#close-modal{
+.closeModal{
   background: none;
   border: solid 1px  rgb(255, 0, 0);
   border-radius: 50%;
   cursor: pointer;
 }
-#fade, #modal{
+.fade, .modal{
   transition: 0.5s;
   opacity: 1;
   pointer-events: all;
 }
-#fade{
+.fade{
   position: fixed;
   top: 0;
   left: 0;
@@ -224,7 +224,7 @@
   z-index: 5;
 }
 
-#modal{
+.modal, .isModalOpen{
   position: fixed;
   transform: translate(-50%, -50%);
   top: 50%;
@@ -237,7 +237,7 @@
   border-radius: 3px;
   
 }
-.modal-header{
+.modalHeader{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -250,6 +250,6 @@
   
 
 }
-.modal-header img{
+.modalHeader {
   margin-left: 2px;
 }

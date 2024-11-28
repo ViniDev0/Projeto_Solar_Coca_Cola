@@ -3,7 +3,7 @@
 .bodyPadrao {
   position: fixed;
 }
-.modal-footer-cliente {
+.modalFooterCliente {
   display: flex;
   justify-content: flex-end ; /* Alinha o botão à direita */
   align-items: end;
@@ -13,28 +13,37 @@
   
 }
 
-.modal-form-cliente  {
+.modalFormCliente  {
   display: grid ;
   grid-template-columns: 1fr 1fr;
   gap: 15px; 
   padding: 10px;
 }
-.modal-form-cliente  input {
+.modalFormCliente  {
   height: 30px;
 }
-.modal-body-client form input {
+.modalBodyCliente {
   display: flex;
   padding: 15px;
   gap: 10px;
   margin-bottom: 5px;
 }
-#modal.hide, #fade.hide{
+.fade, .hide{
   opacity: 0;
   pointer-events: none;
 }
-#modal-hide{
+.modalHide{
   top: 0;
 }
-#logo-cliente{
+.logoCliente{
   width: 200px;
+}
+.fade{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 5;
 }
