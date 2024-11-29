@@ -24,7 +24,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
   
     // Verifique se o e-mail e a senha estão corretos
     if (email === emailCorreto && senha === senhaCorreta) {
-      window.location.href = "../PAGES/CRUDClientes.html"; // Altere para o link da página desejada
+      window.location.href = "./PAGES/CRUDClientes.html"; // Altere para o link da página desejada
     } else {
       alert("E-mail ou senha incorretos.");
     }
