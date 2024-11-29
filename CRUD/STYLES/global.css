@@ -392,4 +392,114 @@ tbody td{
     margin-left: 2px;
 }
 
+/* MODAL MEU PERFIL */
 
+/* Estilo do perfil*/
+
+.perfil {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    background-color: #FAFAFA;
+    color: #092685;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+#perfilModal{
+    z-index: 10;
+}
+
+/* botao de sair  */
+.sair{
+    background-color: rgba(163, 19, 19, 0.897);
+    height: 60px;
+    width: 150px;
+    border-radius: 30px;
+    color: #FAFAFA;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    border: 1px solid transparent;
+}
+
+.sair #sair{
+    max-width: 100%;
+    display: block;
+    height: 30px;
+    align-content: center;  
+    margin-left: 40px;
+}
+
+
+/* caixa com os botoes dentro  */
+.addConta-sair{
+    display: flex;
+    gap: 3px;
+    margin-top: 30px;
+    
+}
+
+/* botao de addconta  */
+/* .addConta{
+    background-color: rgba(163, 19, 19, 0.897);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width: 150px;
+    color: #FAFAFA;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+} */
+
+/* .addConta #add{
+    max-width: 100%;
+    display: block;
+    height: 30px;
+    align-content: center;
+    margin-left: 20px;
+
+} */
+
+/* Estilo da área de perfil */
+.foto-perfil {
+    text-align: center;
+    width: 100%;
+}
+
+/* Estilo da imagem de perfil */
+.foto-perfil img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-bottom: 10px;
+}
+
+/* Estilo das informações do perfil */
+.info h2 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+}
+
+.info p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Adiciona espaçamento para o texto */
+.info p strong {
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+}
