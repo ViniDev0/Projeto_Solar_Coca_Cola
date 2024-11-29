@@ -286,4 +286,4 @@ estilo += "</style>";
 function logout() {
     localStorage.removeItem("loggedIn");
     
-    window.location.href = '/'; }
+    window.location.href = '../PAGES/PaginaLogin.html'; }

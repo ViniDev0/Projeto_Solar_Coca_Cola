@@ -217,3 +217,20 @@ const editDelete = (event) => {
 };
 
 document.querySelector("#tableClient>tbody").addEventListener("click", editDelete);
+
+// Seletores
+const meuPerfilButton = document.getElementById("meuPerfilButton");
+const perfilModal = document.getElementById("perfilModal");
+const fade1 = document.getElementById("fade");
+
+// Abrir modal
+meuPerfilButton.addEventListener("click", () => {
+    perfilModal.classList.remove("hide");
+    fade.classList.remove("hide");
+});
+
+// Fechar modal ao clicar fora
+fade.addEventListener("click", () => {
+    perfilModal.classList.add("hide");
+    fade.classList.add("hide");
+});
