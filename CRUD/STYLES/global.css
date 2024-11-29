@@ -1,0 +1,505 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #ff0000;
+    position: fixed;
+}
+/* estilos main */
+main{
+    display: flex;
+    border: 0px solid white; 
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    background-color: #ffffff;
+    height: 100vh;
+    width: 100vw;
+    border-radius: 24px 0px 0px 20px;
+    position: relative;
+    left: -2.0vw;
+    z-index: 0;
+}
+
+/* estilos Aside */
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.sidebar{
+    top: 0;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F21D1D;
+    border: 0px;
+    width: 17vw;
+    position: relative;
+    z-index: 0;
+    /* border: 1px solid black; */
+}
+
+.sidebar-header{
+    width: 100%;
+}
+
+.sidebar button{
+    width: 160px;
+    height: 40px;
+    padding: 0px;
+    border: 0;
+    border-radius: 50px;
+     margin-bottom: 10px; 
+    font-family: inherit;
+    color: inherit;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    background: transparent;
+    cursor: pointer;
+    color: #ffffff;
+
+}
+
+.sidebar button:hover{
+    border-radius: 50px;
+    background: #690101;
+    color: #ffffff;
+}
+.sidebar .botao-fundo button:hover{
+    border-radius: 50px;
+    background: #ff0000;
+    color: #ffffff;
+}
+.logo-elemento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 20px;
+}
+.line{
+    width: 170px;
+
+}
+.logo-solar{
+    width: 150px;
+    padding-left: 13px;
+}
+
+.elementos-cima{
+    display: grid;
+    justify-items: center;
+    margin-top: 30px;
+    margin-right: 27px;
+    /* border: 1px solid black; */
+}
+
+.botao-cima{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 22px;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+ .botao-fundo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+    /* border: 1px solid black; */
+} 
+.botao-fundo button{
+    margin-top: 10px;
+    /* border: 1px solid black; */
+}
+#cor{
+    background: #690101;
+    width: 17vw;
+    height: 200px;
+}
+/* eestilos barra de pesquisa */
+
+.conteinerBuscarClinte h2{
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.conteinerBuscarClinte{
+    display: grid;
+    margin-left: 20px;
+    width: 60vw;
+}
+
+.pesquisa{
+    display: grid;
+    width: 60vw;
+}
+
+
+
+#pesquisa{
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    height: 2.7vh;
+    background-color: #ffffff;
+    color: black;
+    margin-bottom: 20px;
+  
+    padding: 5px 5px 5px 10px;
+
+}
+/* estilos tabela  */
+
+/* Posicionamento tabela*/
+.conteiner-tabela{
+    display: grid;
+    position: fixed;
+    margin-left: 150px ;
+    top: 70px;
+}
+
+/* Container da tabela com altura e rolagem */
+.tabela-conteiner {
+    max-height: 300px; 
+    overflow-y: auto; /* Adiciona barra de rolagem vertical quando necessário */
+    margin-top: 20px;  
+}
+
+/* Estilos da barra de rolagem personalizada */
+.tabela-conteiner::-webkit-scrollbar {
+    width: 9px;
+}
+
+.tabela-conteiner::-webkit-scrollbar-thumb {
+    background-color: #ff0000;
+    border-radius: 4px;
+}
+
+.tabela-conteiner::-webkit-scrollbar-thumb:hover {
+    background-color: #7e0404;
+}
+table {
+    margin-left: 20px;
+    width: 60vw;
+    border-collapse: collapse;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+thead{
+    border: 1px solid #e6e5e5; 
+    border-radius: 5px 5px 0 0; 
+    overflow: hidden;
+
+  
+}
+th, td {
+    border: 1px solid #e6e5e5;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden; 
+    text-align: center;
+    padding: 10px;
+}
+
+thead th {
+    border: none; 
+    padding: 5px;
+    background-color: #ffffff;
+}
+tbody{
+    border: 1px solid #e6e5e5;  
+    border-top: none; 
+    scroll-behavior: auto;
+
+}
+thead th, tbody td {
+    border: none; 
+    padding: 5px;
+    background-color: #ffffff;
+}
+tbody td{
+    border-bottom: 2px solid #ccc; 
+    height: 1vh;
+}
+
+/* Estilo Botões */
+
+.botao-cabecalho{
+    display: grid;
+    width: 60vw;
+    justify-items: end;
+    margin-left: 179px;
+    margin-top: 100px;
+
+}
+
+
+
+#button-imprimir{
+    height: 40px;
+    width: 160px;
+    text-align: center;
+    background: rgb(211, 12, 12);
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.4s ;
+    opacity: 0.9;
+    position: relative;
+    left: 650px;
+    top: 160px;
+    justify-content: center;
+
+}
+
+#button-imprimir:hover{
+    background: rgb(231, 43, 43);
+}
+
+.open-modal:hover{
+    background: rgb(231, 43, 43);
+}
+
+#h2-impressao{
+    display: none;
+}
+
+
+/* BOTOES DE EXCLUIR E EDITAR */
+.edit{
+    cursor: pointer;
+    height: 25px;
+}
+.edit:hover{
+    opacity: 70%;
+
+}
+.exclude{
+
+    cursor: pointer;
+    height: 27px;
+
+}
+.exclude:hover{
+   opacity: 70%;
+}
+.button-green{
+    background: rgb(80, 209, 80);
+    height: 5vh;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.486);
+    cursor: pointer;
+}
+.button-green:hover{
+    background: rgb(39, 172, 39);
+}
+.button-red{
+    background: red;
+    height: 5vh;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.486);
+    margin-left: 7px;
+    cursor: pointer;
+}
+.button-red:hover{
+    background: rgb(236, 19, 19);
+}
+/* FIM DOS BOTOES  */
+
+/* Estilos modal */
+
+
+.open-modal {
+    height: 40px;
+    width: 160px;
+    text-align: center;
+    background: rgb(211, 12, 12);
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.4s ;
+    opacity: 0.9;
+    position: relative;
+    top: 200px;
+}
+.open-modal:hover{
+    opacity: 1;
+}
+#close-modal{
+    background: none;
+    border: solid 1px  rgb(255, 0, 0);
+    border-radius: 50%;
+    cursor: pointer;
+}
+#fade, #modal{
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+#fade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 5;
+}
+
+#modal{
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    max-width: 90%;
+    min-width: 45%;
+    border: 0.5rem;
+    background-color: #ffffff;
+    border-radius: 3px;
+    
+}
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    background-color: red;
+    min-width: 45%;
+    padding: 5px;
+    
+
+}
+.modal-header img{
+    margin-left: 2px;
+}
+
+/* MODAL MEU PERFIL */
+
+/* Estilo do perfil*/
+
+.perfil {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    background-color: #FAFAFA;
+    color: #092685;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+#perfilModal{
+    z-index: 10;
+}
+
+/* botao de sair  */
+.sair{
+    background-color: rgba(163, 19, 19, 0.897);
+    height: 60px;
+    width: 150px;
+    border-radius: 30px;
+    color: #FAFAFA;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    border: 1px solid transparent;
+}
+
+.sair #sair{
+    max-width: 100%;
+    display: block;
+    height: 30px;
+    align-content: center;  
+    margin-left: 40px;
+}
+
+
+/* caixa com os botoes dentro  */
+.addConta-sair{
+    display: flex;
+    gap: 3px;
+    margin-top: 30px;
+    
+}
+
+/* botao de addconta  */
+/* .addConta{
+    background-color: rgba(163, 19, 19, 0.897);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width: 150px;
+    color: #FAFAFA;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+} */
+
+/* .addConta #add{
+    max-width: 100%;
+    display: block;
+    height: 30px;
+    align-content: center;
+    margin-left: 20px;
+
+} */
+
+/* Estilo da área de perfil */
+.foto-perfil {
+    text-align: center;
+    width: 100%;
+}
+
+/* Estilo da imagem de perfil */
+.foto-perfil img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-bottom: 10px;
+}
+
+/* Estilo das informações do perfil */
+.info h2 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+}
+
+.info p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Adiciona espaçamento para o texto */
+.info p strong {
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../STYLES/style.css">
+    <title>Promoções</title>
+</head>
+<body>
+    <div class="container">
+      <aside class="sidebar">
+         <div class="elementos-cima">
+            <header class="sidebar-header">
+                <div class="logo-elemento">
+                    <img class="logo-solar" src="../imgs/SOLAR-LOGO.png" alt="">
+                    <img class="line"  src="../imgs/Line 7.png" alt="">
+                </div>
+            </header>
+            <nav class="botao-cima">
+                <button onclick="window.location.href='./'">
+                    <span>DASHBOARD</span>
+                </button>
+                <button onclick="window.location.href='./CRUDClientes.html'">
+                    <span>CLIENTES</span> 
+                </button>
+                <button onclick="window.location.href='./CRUDProduto.html'">
+                    <span>PRODUTOS</span>
+                </button>
+                <button onclick="window.location.href='./CRUDPromocoes.html'">
+                    <span>PROMOÇÕES</span>
+                </button>
+                <button onclick="window.location.href='./CRUDPrecos.html'">
+                    <span>PREÇOS</span>
+                </button>
+            </nav>
+    </div>
+        <div id="cor">
+            <div class="nav-baixa">
+                <nav class="botao-fundo">
+                    <button>
+                            <span>MEU PERFIL</span>
+                    </button>
+                    <button id="logoutButton" onclick="logout()">SAIR</button>
+                </nav>
+            </div>
+        </div>
+    </aside>
+    <main>
+
+        <div id="conteiner-dashboard">
+            <canvas id="myChart"></canvas>
+          </div>
+          
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          
+          <script>
+            localStorage.setItem('db_cliente', [])
+            //  localStorage.clear();
+            console.log('${client.tipoCliente}')
+            console.log(localStorage.getItem('db_cliente'))
+            const db_cliente =localStorage.getItem('db_cliente');
+            // console.table(db_cliente.split(','))
+            
+            let splitdb = [18, 12, 6, 9,12,3,9];
+            if(db_cliente){
+                splitdb = db_cliente.split(',');
+            }
+
+
+            const ctx = document.getElementById('myChart');
+        //   cliente X regiao 
+            new Chart(ctx, {
+              type: 'bar',
+              data: {
+                labels: ['Ouro', 'Prata', 'Bronze'],
+                datasets: [{
+                  label: 'Qntd. Tipo de Cliente',
+                //   data: [1, 1900, 3, 5, 2, 3],
+                data:  splitdb,
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+          </script>
