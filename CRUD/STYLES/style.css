@@ -1,6 +1,7 @@
-@import "../STYLES/CrudCliente.css";
-@import "../STYLES/CrudPreco.css";
-@import "../STYLES/CrudPromocoes.css";
-@import "../STYLES/CrudProduto.css";
-@import "../STYLES/global.css";
-@import "../STYLES/dashboard.css";
+@import "./CrudCliente.css";
+@import "./CrudPreco.css";
+@import "./CrudPromocoes.css";
+@import "./CrudProduto.css";
+@import "./global.css";
+@import "./dashboard.css";
+
