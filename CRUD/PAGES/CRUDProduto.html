@@ -5,147 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../STYLES/style.css">
     <title>CRUDProduto</title>
+    <style>
+        .button-group {
+            display: flex;
+            gap: 10px; 
+            margin-top: 10px;
+        }
+        .button-group button {
+            padding: 10px 15px;
+            background-color: #c82333;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+        .button-group button:hover {
+            background-color: #a71d2a;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-      <aside class="sidebar">
-         <div class="elementos-cima">
-            <header class="sidebar-header">
-                <div class="logo-elemento">
-                    <img class="logo-solar" src="../imgs/SOLAR-LOGO.png" alt="Logo Solar">
-                    <img class="line" src="../imgs/Line 7.png" alt="Linha separadora">
-                </div>
-            </header>
-            <nav class="botao-cima">
-                <button onclick="window.location.href='./'">
-                    <span>DASHBOARD</span>
-                </button>
-                <button onclick="window.location.href='./CRUDClientes.html'">
-                    <span>CLIENTES</span> 
-                </button>
-                <button onclick="window.location.href='./CRUDProduto.html'">
-                    <span>PRODUTOS</span>
-                </button>
-                <button onclick="window.location.href='./CRUDPromocoes.html'">
-                    <span>PROMOÇÕES</span>
-                </button>
-                <button onclick="window.location.href='./CRUDPrecos.html'">
-                    <span>PREÇOS</span>
-                </button>
-            </nav>
-        </div>
-        <div id="cor">
-            <div class="nav-baixa">
-                <nav class="botao-fundo">
-                    <button id="meuPerfilButton">
-                        <span>MEU PERFIL</span>
+        <aside class="sidebar">
+            <div class="elementos-cima">
+                <header class="sidebar-header">
+                    <div class="logo-elemento">
+                        <img class="logo-solar" src="../imgs/SOLAR-LOGO.png" alt="Logo Solar">
+                        <img class="line" src="../imgs/Line 7.png" alt="Linha separadora">
+                    </div>
+                </header>
+                <nav class="botao-cima">
+                    <button onclick="window.location.href='./dashboard.html'">
+                        <span>DASHBOARD</span>
                     </button>
-                    <button onclick="window.location.href='../CRUD/PAGES/Login.html'">
-                        <span>SAIR</span>
+                    <button onclick="window.location.href='./CRUDClientes.html'">
+                        <span>CLIENTES</span>
+                    </button>
+                    <button onclick="window.location.href='./CRUDProduto.html'">
+                        <span>PRODUTOS</span>
+                    </button>
+                    <button onclick="window.location.href='./CRUDPromocoes.html'">
+                        <span>PROMOÇÕES</span>
+                    </button>
+                    <button onclick="window.location.href='./CRUDPrecos.html'">
+                        <span>PREÇOS</span>
                     </button>
                 </nav>
             </div>
-        </div>
-    </aside>
-    <main>
-       
-        <div class="conteiner-tabela">
-           
-            <div class="conteinerBuscarClinte">
-                <h2>Buscar Produto</h2>
-                 <div class="pesquisa">
-                    <input type="text" id="pesquisa" placeholder="Pesquisar...">
+            <div id="cor">
+                <div class="nav-baixa">
+                    <nav class="botao-fundo">
+                        <button id="meuPerfilButton">
+                            <span>MEU PERFIL</span>
+                        </button>
+                        <button onclick="window.location.href='../index.html'">
+                            <span>SAIR</span>
+                        </button>
+                    </nav>
                 </div>
             </div>
-         <div class="tabela-conteiner">
-                <table id="tableClient">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nome</th>
-                            <th>Descrição</th>
-                            <th>Categoria</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-        <tbody>
-            <tr>
-            </tr>
+        </aside>
 
-            </tbody>
-        </table>        
-                
+        <main>
+            <div class="conteiner-tabela">
+                <div class="conteinerBuscarClinte">
+                    <h2>Buscar Produto</h2>
+                    <div class="pesquisa">
+                        <input type="text" id="pesquisa" placeholder="Pesquisar...">
+                    </div>
+                </div>
+                <div class="tabela-conteiner">
+                    <table id="tableClient">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Descrição</th>
+                                <th>Categoria</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-    </div>
-    <div class="botao-cabecalho">     
-        <button class="open-modal">
-            <img src="../imgs/adicionar.png" alt="Adicionar Produto">
-            <span> Adicionar Produto </span>
-        </button>
-    </div>
-   
-    <button id="button-imprimir">Imprimir</button>
-        
-        <!-- Modal -->
-        <div id="fade" class="hide"></div>
-        <div id="modal" class="hide">
-            <div class="modal-header">
-                <img id="logo-cliente" src="../imgs/Produto.png" alt="Logo Produto">
-                <button id="close-modal">
-                    <img src="../imgs/excluir.png" alt="Fechar">
+            <div class="button-group">
+                <button id="button-imprimir">Imprimir</button>
+                <button class="open-modal">
+                    <img src="../imgs/adicionar.png" alt="Adicionar Produto">
+                    <span> Adicionar Produto </span>
                 </button>
             </div>
 
-            <div class="modal-body">
-                <div id="BOTAO-IMG">
-                    <!-- Adiciona botão para abrir upload de imagem -->
-                    <button type="button" onclick="document.getElementById('uploadImagem').click();">
-                        <img class="muda-imagem" src="../imgs/botao-adicionar.png" alt="Adicionar Imagem">
+            <div id="fade" class="hide"></div>
+            <div id="modal" class="hide">
+                <div class="modal-header">
+                    <img id="logo-cliente" src="../imgs/Produto.png" alt="Logo Produto">
+                    <button id="close-modal">
+                        <img src="../imgs/excluir.png" alt="Fechar">
                     </button>
-                    <input type="file" id="uploadImagem" accept="image/*" style="display: none;">
                 </div>
-                <div class="info-crud">
-                    <form id="form" class="modal-form-produto">
-                        <input type="text" id="id" class="modal-field" placeholder="ID do Produto" required>
-                        <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Produto" required>
-                        <input type="text" id="descricao" class="modal-field" placeholder="Descrição do Produto" required>
-                        <select id="categoria" class="modal-field" required>
-                            <option value="" disabled selected>Categoria do Produto</option>
-                            <option value="Refrigerante">Refrigerante</option>
-                            <option value="Suco">Suco</option>
-                            <option value="Chá">Chá</option>
-                        </select>
-                    </form>
-                    <div class="modal-footer">
-                        <button id="salvar" class="button-green">Salvar</button>
-                        <button id="cancelar" class="button-red">Cancelar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="perfilModal" class="hide">
-            <div class="perfil">
-                <div class="foto-perfil">
-                    <img src="../imgs/meuperfil.jpg" alt="Foto de perfil">
-                    <div class="info">
-                        <h2>Olá, Marcio!</h2>
-                        <p>marcio@gmail.com</p>
-                    </div>
-                </div>
-                <div class="addConta-sair">
-                    <div class="sair">
-                        <img src="../imgs/icons8-sair-50.png" alt="Icone de sair" id="sair">
-                        <button onclick="window.location.href='../CRUD/PAGES/Login.html'">
-                            <span>SAIR</span>
+                <div class="modal-body">
+                    <div id="BOTAO-IMG">
+                        <button type="button" onclick="document.getElementById('uploadImagem').click();">
+                            <img class="muda-imagem" src="../imgs/botao-adicionar.png" alt="Adicionar Imagem">
                         </button>
+                        <input type="file" id="uploadImagem" accept="image/*" style="display: none;">
+                    </div>
+                    <div class="info-crud">
+                        <form id="form" class="modal-form-produto">
+                            <input type="text" id="id" class="modal-field" placeholder="ID do Produto" required>
+                            <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Produto" required>
+                            <input type="text" id="descricao" class="modal-field" placeholder="Descrição do Produto" required>
+                            <select id="categoria" class="modal-field" required>
+                                <option value="" disabled selected>Categoria do Produto</option>
+                                <option value="Refrigerante">Refrigerante</option>
+                                <option value="Suco">Suco</option>
+                                <option value="Chá">Chá</option>
+                            </select>
+                        </form>
+                        <div class="modal-footer">
+                            <button id="salvar" class="button-green">Salvar</button>
+                            <button id="cancelar" class="button-red">Cancelar</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
+    </div>
 
-    </main>
-</div>
-<script src="../SCRIPTS/scriptProdutos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="../SCRIPTS/scriptProdutos.js"></script>
 </body>
 </html>

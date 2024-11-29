@@ -6,6 +6,7 @@ const modal = document.querySelector("#modal");
 const fade = document.querySelector("#fade");
 const uploadInput = document.getElementById("uploadImagem");
 const botaoImagem = document.querySelector(".muda-imagem");
+const printButton = document.getElementById("imprimir"); // Botão de imprimir
 
 // Variável de controle de imagem
 let isNewProduct = true; // Flag para controlar se é um novo produto
@@ -218,19 +219,33 @@ const editDelete = (event) => {
 
 document.querySelector("#tableClient>tbody").addEventListener("click", editDelete);
 
-// Seletores
-const meuPerfilButton = document.getElementById("meuPerfilButton");
-const perfilModal = document.getElementById("perfilModal");
-const fade1 = document.getElementById("fade");
+// Função para imprimir tabela em PDF
+const imprimirProdutos = () => {
+    const { jsPDF } = window.jspdf; // Importa o jsPDF
+    const doc = new jsPDF();
 
-// Abrir modal
-meuPerfilButton.addEventListener("click", () => {
-    perfilModal.classList.remove("hide");
-    fade.classList.remove("hide");
-});
+    doc.setFontSize(16);
+    doc.text("Lista de Produtos", 10, 10);
 
-// Fechar modal ao clicar fora
-fade.addEventListener("click", () => {
-    perfilModal.classList.add("hide");
-    fade.classList.add("hide");
-});
+    const produtos = readProduto();
+    let y = 20;
+
+    produtos.forEach((produto, index) => {
+        doc.text(
+            `${index + 1}. ID: ${produto.id}, Nome: ${produto.nome}, Descrição: ${produto.descricao}, Categoria: ${produto.categoria}`,
+            10,
+            y
+        );
+        y += 10;
+
+        if (y > 280) {
+            doc.addPage();
+            y = 20;
+        }
+    });
+
+    doc.save("produtos.pdf");
+};
+
+// Evento no botão
+document.getElementById("button-imprimir").addEventListener("click", imprimirProdutos);
